@@ -10,16 +10,34 @@ addBtn.addEventListener("click", function(){
 })
 
 function addTodo(){
+
+  // Creating list items
   let li = document.createElement("li");
-  li.textContent = todoInputEl.value[0].toUpperCase() + todoInputEl.value.slice(1);
   li.classList.add("todo-item")
   
+  // Create span for text
+  let text = document.createElement("span");
+  text.classList.add("todo-text");
+  text.textContent = todoInputEl.value[0].toUpperCase() + todoInputEl.value.slice(1);
+
+  // Delete btns
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
   deleteBtn.classList.add("delete-btn");
+  deleteBtn.addEventListener("click", function(){
+    li.remove();
+  })
 
-  li.appendChild(deleteBtn)
+  // Checkboxes
+  let checkBox = document.createElement("input");
+  checkBox.type = "checkBox";
+
+  // Appending li and delete btns
+  li.appendChild(checkBox);
+  li.appendChild(text);
+  li.appendChild(deleteBtn);
   todoList.appendChild(li);
-  
+
   todoInputEl.value = "";
+
 }
