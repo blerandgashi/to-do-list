@@ -16,6 +16,9 @@ function addTodo(){
   li.classList.add("todo-item")
   
   // Create span for text
+  if (todoInputEl.value.trim() === "") {
+    return;
+  }
   let text = document.createElement("span");
   text.classList.add("todo-text");
   text.textContent = todoInputEl.value[0].toUpperCase() + todoInputEl.value.slice(1);
