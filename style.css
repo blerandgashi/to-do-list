@@ -75,7 +75,7 @@ input[type="checkbox"]{
   cursor: pointer;
 }
 .todo-text{
-  font-size: 1.2rem;
+  font-size: 1rem;
   columns: #2c3e50;
 }
 .delete-btn {
