@@ -65,6 +65,19 @@ h1{
   border-radius: 10px;
   margin-bottom: 5px;
 }
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.todo-text{
+  font-size: 1.2rem;
+  columns: #2c3e50;
+}
 .delete-btn {
   background: #e74c3c;
   color: white;
