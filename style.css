@@ -103,6 +103,11 @@ input[type="checkbox"]{
   font-weight: bold;
   cursor: pointer;
 }
+.filter-btn.active{
+  background: #667eea;
+  color: white;
+  border-color: blue;
+}
 .footer{
   font-size: 0.9rem;
   color: #5c6060;
