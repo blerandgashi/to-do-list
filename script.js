@@ -30,7 +30,15 @@ function addTodo(){
 
   // Checkboxes
   let checkBox = document.createElement("input");
-  checkBox.type = "checkBox";
+  checkBox.type = "checkbox";
+
+  checkBox.addEventListener("change", function(){
+    if(checkBox.checked){
+      li.classList.add("completed")
+    }else{
+      li.classList.remove("completed")
+    }
+  })
 
   // Appending li and delete btns
   li.appendChild(checkBox);
